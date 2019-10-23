@@ -30,7 +30,7 @@
 
 
     </div>
-    <form action="signup.php">
+    <form action="register.php">
         <button> New user? Create account</button>
     </form>
 
