@@ -1,10 +1,7 @@
 <?php  
-$con = mysqli_connect("localhost", "root", "", "servicer"); //Connection variable
 
-if(mysqli_connect_errno()) 
-{
-	echo "Failed to connect: " . mysqli_connect_errno();
-}
+
+require 'config/config.php';
 
 
 //Declaring variables to prevent errors
