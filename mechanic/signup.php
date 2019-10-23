@@ -20,19 +20,19 @@
 	Enter your Details
 	<div>
 		<form name="loginbook" id="loginbook" action="#">
-		Login ID :
-		<input type="text" name="u_id" placeholder="Enter Your User ID"> <br>
+		Shop Name:
+        <input type="text" name="mechanic_name" placeholder="Enter Your name"> <br>
+        Phone:
+		<input type="text" name="mechanic_name" placeholder="Enter Your name"> <br>
+        Email:
+		<input type="email" name="mechanic_email" placeholder="Enter Your email"> <br>
 		Password : <input type="password" name="password"><br>
-		<input type="submit" name="login" value="Login">
-		<button> Forgot login creditals.. </button>
+		<input type="submit" name="Sign Up" value="Login">
 </form>
 
 
 
     </div>
-    <form action="signup.php">
-        <button> New user? Create account</button>
-    </form>
 
 </div>
 </div>
