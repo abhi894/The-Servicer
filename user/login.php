@@ -1,3 +1,13 @@
+<?php  
+$con = mysqli_connect("localhost", "root", "", "servicer"); //Connection variable
+
+if(mysqli_connect_errno()) 
+{
+	echo "Failed to connect: " . mysqli_connect_errno();
+}
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +40,7 @@
 
 
 	</div>
-<button> New user? Create account</button>
+<button> <a href="register.php">New user? Create account </a></button>
 </div>
 </div>
 </body>
