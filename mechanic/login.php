@@ -1,6 +1,6 @@
 <?php  
 require 'config/config.php';
-
+$error_array = array();
 
 if(isset($_POST['login'])) {
 
@@ -9,7 +9,7 @@ if(isset($_POST['login'])) {
 	$_SESSION['email'] = $email; //Store email into session variable 
 	$password = md5($_POST['password']); //Get password
 
-	$check_database_query = mysqli_query($con, "SELECT * FROM mechanic  WHERE email='$email' AND password='$password'");
+	$check_database_query = mysqli_query($con, "SELECT * FROM mechanic WHERE email='$email' AND password='$password'");
 	$check_login_query = mysqli_num_rows($check_database_query);
 
 	if($check_login_query == 1) {
@@ -18,7 +18,7 @@ if(isset($_POST['login'])) {
 
 		$user_closed_query = mysqli_query($con, "SELECT * FROM mechanic WHERE email='$email' AND status='0'");
 		if(mysqli_num_rows($user_closed_query) == 1) {
-			$reopen_account = mysqli_query($con, "UPDATE mechanic SET status='1' WHERE email='$email'");
+			$reopen_account = mysqli_query($con, "UPDATE users SET status='1' WHERE email='$email'");
 		}
 
 		$_SESSION['username'] = $username;
@@ -49,6 +49,10 @@ if(isset($_POST['login'])) {
 		Login ID :
 		<input type="email" name="email" placeholder="Enter Your User ID"> <br>
 		Password : <input type="password" name="password" placeholder="Password"><br>
+
+		 
+		<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>"; ?>
+
 		<input type="submit" name="login" value="Login">
 		<button> Forgot login creditals.. </button>
 </form>
@@ -57,7 +61,6 @@ if(isset($_POST['login'])) {
 
 	</div>
 <button> <a href="register.php">New user? Create account </a></button>
-
 </div>
 </div>
 </body>
