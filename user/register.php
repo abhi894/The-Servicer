@@ -112,6 +112,7 @@ if(isset($_POST['register_button'])){
 <html>
 <head>
 	<title>User Registration</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/regstyle.css">
 </head>
 <body>
 
