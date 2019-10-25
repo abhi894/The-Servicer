@@ -1,6 +1,6 @@
 <?php  
 require 'config/config.php';
-
+$error_array = array();
 
 if(isset($_POST['login'])) {
 
@@ -49,6 +49,10 @@ if(isset($_POST['login'])) {
 		Login ID :
 		<input type="email" name="email" placeholder="Enter Your User ID"> <br>
 		Password : <input type="password" name="password" placeholder="Password"><br>
+
+		 
+		<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>"; ?>
+
 		<input type="submit" name="login" value="Login">
 		<button> Forgot login creditals.. </button>
 </form>
