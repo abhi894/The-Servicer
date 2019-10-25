@@ -175,6 +175,8 @@ if(isset($_POST['register_button'])){
 
 	</form>
 
+	<button> <a href="login.php">Already a user? </a></button>
+
 
 </body>
 </html>
