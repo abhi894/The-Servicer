@@ -102,6 +102,9 @@ if(isset($_POST['register_button'])){
 		$_SESSION['reg_fname'] = "";
 		$_SESSION['reg_email'] = "";
 		$_SESSION['reg_email2'] = "";
+
+		header("Location: index.php");
+		exit();
 	}
 
 }
@@ -157,6 +160,8 @@ if(isset($_POST['register_button'])){
 
 
 		<input type="submit" name="register_button" value="Register">
+
+		&nbsp <button><a href="login.php">Already a user,Log in</a></button>
 		<br>
 
 		<?php if(in_array("<span style='color: #14C800;'>You're all set! Goahead and login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>"; ?>
