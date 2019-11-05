@@ -103,8 +103,7 @@ if(isset($_POST['register_button'])){
 		$_SESSION['reg_email'] = "";
 		$_SESSION['reg_email2'] = "";
 
-		header("Location: index.php");
-		exit();
+		
 	}
 
 }
@@ -115,7 +114,7 @@ if(isset($_POST['register_button'])){
 <html>
 <head>
 	<title>User Registration</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/regstyle.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/regstyle.css">
 </head>
 <body>
 

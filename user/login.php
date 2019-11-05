@@ -14,7 +14,7 @@ if(isset($_POST['login'])) {
 
 	if($check_login_query == 1) {
 		$row = mysqli_fetch_array($check_database_query);
-		$username = $row['username'];
+		$username = $row['id'];
 
 		$user_closed_query = mysqli_query($con, "SELECT * FROM user WHERE email='$email' AND status='0'");
 		if(mysqli_num_rows($user_closed_query) == 1) {
