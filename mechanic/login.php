@@ -35,33 +35,34 @@ if(isset($_POST['login'])) {
 ?>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="styles/login.css"/>
 <head>
+
 
 	<title></title>
 </head>
-<body >
-<div><h2>Welcome to ServiceBooker</h2></div>
-
-<div>
-	Enter your Details
-	<div>
+<body>
+<div class="container">
+	<section id="content">
 		<form name="login" id="login" action="login.php" method="POST">
-		Login ID :
-		<input type="email" name="email" placeholder="Enter Your User ID"> <br>
-		Password : <input type="password" name="password" placeholder="Password"><br>
-
-		 
-		<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>"; ?>
-
-		<input type="submit" name="login" value="Login">
-		<button> Forgot login creditals.. </button>
-</form>
-
-
-
-	</div>
-<button> <a href="register.php">New user? Create account </a></button>
-</div>
-</div>
+			<h1>Login Form</h1>
+			<div>
+				<input type="email" name="email" placeholder="Email">
+			</div>
+			<div>
+				<input type="password" name="password" placeholder="Password"><br>
+        <?php if(in_array("Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>"; ?>
+			</div>
+      
+			<div>
+				<input type="submit" name="login" value="Login">
+				<a href="#">Lost your password?</a>
+				<a href="register.php">New user? </a></button>
+			</div>
+		</form><!-- form -->
+		<div class="button">
+		</div><!-- button -->
+	</section><!-- content -->
+</div><!-- container -->
 </body>
 </html>
