@@ -14,7 +14,7 @@ if(isset($_POST['login'])) {
 
 	if($check_login_query == 1) {
 		$row = mysqli_fetch_array($check_database_query);
-		$username = $row['username'];
+		$username = $row['id'];
 
 		$user_closed_query = mysqli_query($con, "SELECT * FROM mechanic WHERE email='$email' AND status='0'");
 		if(mysqli_num_rows($user_closed_query) == 1) {
@@ -35,13 +35,25 @@ if(isset($_POST['login'])) {
 ?>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="styles/login.css"/>
+
 <head>
 
 
-	<title></title>
+	<title>Mechanic</title>
 </head>
+<link rel="stylesheet" href="styles/login.css"/>
 <body>
+
+
+<div class="hom">
+	<a href="../index.html"><h3>Home</h3></a>
+</div>
+
+
+
+
+
+
 <div class="container">
 	<section id="content">
 		<form name="login" id="login" action="login.php" method="POST">

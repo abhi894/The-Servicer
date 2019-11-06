@@ -1,11 +1,6 @@
 <?php  
-$con = mysqli_connect("localhost", "root", "", "servicer"); //Connection variable
 
-if(mysqli_connect_errno()) 
-{
-	echo "Failed to connect: " . mysqli_connect_errno();
-}
-
+require 'config/config.php';
 
 //Declaring variables to prevent errors
 $name = ""; //name
@@ -112,8 +107,6 @@ if(isset($_POST['register_button'])){
 		$_SESSION['reg_email'] = "";
 		$_SESSION['reg_email2'] = "";
 		
-		header("Location: index.php");
-		exit();
 	}
 
 }
@@ -126,7 +119,11 @@ if(isset($_POST['register_button'])){
 <head>
 	<title>Mechanic Registration</title>
 </head>
-<body>
+<body style="margin:0px">
+<div class="home">
+	
+	<a href="../index.html"><h3>Home</h3></a>
+</div>
 <div class="container">
 	<section id="content">
 		<form action="register.php" method="POST">

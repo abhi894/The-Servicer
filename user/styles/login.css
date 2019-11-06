@@ -6,13 +6,7 @@ body {
 	padding: 0;
 	position: relative;
 }
-h1{ font-size:28px;}
-h2{ font-size:26px;}
-h3{ font-size:18px;}
-h4{ font-size:16px;}
-h5{ font-size:14px;}
-h6{ font-size:12px;}
-h1,h2,h3,h4,h5,h6{ color:#563D64;}
+
 small{ font-size:10px;}
 b, strong{ font-weight:bold;}
 a{ text-decoration: none; }
@@ -120,7 +114,7 @@ form:after {
 	z-index: -2;
 }
 #content form { margin: 0 20px; position: relative }
-#content form input[type="text"],
+#content form input[type="email"],
 #content form input[type="password"] {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -239,4 +233,24 @@ form:after {
 .button a:hover {
 	background-position: 0 -135px;
 	color: #00aeef;
+}
+
+.home{
+    text-align: right;
+
+}
+
+.home h3{
+    color: #777;
+    padding-right: 2%;
+}
+
+.login_title h1{
+    color: #004a80;
+}
+.login_title{
+  text-align: center;
+}
+.bar_top{
+    display: inline;
 }

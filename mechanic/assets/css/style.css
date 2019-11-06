@@ -1,0 +1,36 @@
+.top_bar{
+	width: 100%;
+	min-width: 1024px;
+	height: 50px;
+	background-color: #A3CB38;
+	border-bottom: 5px solid #C4E538;
+	margin: 0 0 10px 0;
+	display: inline-flex;
+}
+body{
+
+}
+.logo a{
+margin-left: 79px;
+    font-family: fantasy;
+    position: relative;
+    top: 9px;
+    font-size: x-large;
+}
+
+a:hover {
+	text-decoration: none;
+}
+nav a{
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+nav	{
+	float: right;
+	right: 1px;
+	position: absolute;
+	margin: 10px;
+}

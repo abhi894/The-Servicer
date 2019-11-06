@@ -103,7 +103,6 @@ if(isset($_POST['register_button'])){
 		$_SESSION['reg_email'] = "";
 		$_SESSION['reg_email2'] = "";
 
-		
 	}
 
 }
@@ -112,61 +111,67 @@ if(isset($_POST['register_button'])){
 
 
 <html>
+<link rel="stylesheet" href="styles/register.css"/>
 <head>
 	<title>User Registration</title>
-	<link rel="stylesheet" type="text/css" href="../assets/css/regstyle.css">
 </head>
 <body>
+<div class="home">
+	<a href="../index.html"><h3>Home</h3></a>
+</div>
 
-	<form action="register.php" method="POST">
-		Name : <input type="text" name="reg_fname" placeholder="First Name" value="<?php 
+<div class="container">
+	<section id="content">
+		<form action="register.php" method="POST">
+			<h1>Sign Up</h1>
+      <div>
+				<input type="text" name="reg_fname" placeholder="First Name" value="<?php 
 		if(isset($_SESSION['reg_fname'])) {
 			echo $_SESSION['reg_fname'];
 		} 
 		?>" required>
-		<br>
-		<?php if(in_array("Your name must be between 2 and 25 characters<br>", $error_array)) echo "Your first name must be between 2 and 25 characters<br>"; ?>
-		
-		
-
-
-
-		Email <input type="email" name="reg_email" placeholder="Email" value="<?php 
+        <?php if(in_array("Your name must be between 2 and 25 characters<br>", $error_array)) echo "Your first name must be between 2 and 25 characters<br>"; ?>
+			</div>
+      
+      
+			<div>
+				<input type="email" name="reg_email" placeholder="Email" value="<?php 
 		if(isset($_SESSION['reg_email'])) {
 			echo $_SESSION['reg_email'];
 		} 
 		?>" required>
-		<br>
-
-		Phone <input type="text" name="reg_email2" placeholder="Phone number" value="<?php 
+			</div>
+      
+      <div>
+			<input type="text" name="reg_email2" placeholder="Phone number" value="<?php 
 		if(isset($_SESSION['reg_email2'])) {
 			echo $_SESSION['reg_email2'];
 		} 
 		?>" required>
-		<br>
 		<?php if(in_array("Email already in use<br>", $error_array)) echo "Email already in use<br>"; 
 		else if(in_array("Invalid email format<br>", $error_array)) echo "Invalid email format<br>";
 		else if(in_array("Emails don't match<br>", $error_array)) echo "Emails don't match<br>"; ?>
-
-
-		Password <input type="password" name="reg_password" placeholder="Password" required>
-		<br>
-		Confirm Passsword <input type="password" name="reg_password2" placeholder="Confirm Password" required>
-		<br>
-		<?php if(in_array("Your passwords do not match<br>", $error_array)) echo "Your passwords do not match<br>"; 
+			</div>
+      
+      
+      <div>
+				<input type="password" name="reg_password" placeholder="Password" required>
+			</div>
+      
+      <div>
+				<input type="password" name="reg_password2" placeholder="Confirm Password" required>
+        <?php if(in_array("Your passwords do not match<br>", $error_array)) echo "Your passwords do not match<br>"; 
 		else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo "Your password can only contain english characters or numbers<br>";
 		else if(in_array("Your password must be betwen 5 and 30 characters<br>", $error_array)) echo "Your password must be betwen 5 and 30 characters<br>"; ?>
-
-
-		<input type="submit" name="register_button" value="Register">
-
-		&nbsp <button><a href="login.php">Already a user,Log in</a></button>
-		<br>
-
-		<?php if(in_array("<span style='color: #14C800;'>You're all set! Goahead and login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>"; ?>
-
-	</form>
-
-
+			</div>
+			<div>
+				<input type="submit" name="register_button" value="Register">
+				<a href="login.php">Already a user? </a>
+			</div>
+		</form><!-- form -->
+		<div class="button">
+		</div><!-- button -->
+	</section><!-- content -->
+</div><!-- container -->
 </body>
 </html>
