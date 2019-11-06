@@ -16,10 +16,7 @@ if(isset($_POST['login'])) {
 		$row = mysqli_fetch_array($check_database_query);
 		$username = $row['id'];
 
-		$user_closed_query = mysqli_query($con, "SELECT * FROM user WHERE email='$email' AND status='0'");
-		if(mysqli_num_rows($user_closed_query) == 1) {
-			$reopen_account = mysqli_query($con, "UPDATE user SET status='1' WHERE email='$email'");
-		}
+		
 
 		$_SESSION['username'] = $username;
 		header("Location: index.php");
