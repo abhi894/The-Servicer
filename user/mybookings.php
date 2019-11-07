@@ -1,6 +1,8 @@
 <?php 
 include("includes/header.php"); 
 
+
+
 ?>
 <div class="main_column column"> 
 <?php 
@@ -11,6 +13,7 @@ while ($row= mysqli_fetch_array($data)) {
 	$str="";
 	$id= $row['id'];
 	$mecid= $row['mechanic_id'];
+	$uid= $row['user_id'];
 	$loc= $row['locality'];
 	$regnum=$row['reg_no'];
 	$type=$row['type'];
@@ -30,6 +33,9 @@ $mechanic=mysqli_fetch_array($mecdata);
 $mecname= $mechanic['name'];
 $mecemail= $mechanic['email'];
 $mecphone= $mechanic['phone'];
+
+
+
 
 ?>  <div class="bookings"> 
 <div class='pic'>
@@ -54,9 +60,31 @@ Vehicle type: <?php echo $type; ?> &nbsp
 
 status: <?php echo $status; ?> &nbsp 
 
-Booking Date: <?php echo $bookdate; ?> &nbsp 
+Booking Date & Time: <?php echo $bookdate; ?> &nbsp 
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+  Cancel booking
+</button>
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Are you sure?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
 
+      <div class="modal-footer">
+      	<form action="mybookings.php?" method="POST">
+        <input type="submit" name="delete" class="btn btn-danger" data-dismiss="modal" value="Yes i am Sure"></input>
+        </form>
+      
+      </div>
+
+    </div>
+  </div>
+</div>
 
 </div> 
 <?php 
