@@ -103,6 +103,8 @@ if(isset($_POST['register_button'])){
 		$_SESSION['reg_email'] = "";
 		$_SESSION['reg_email2'] = "";
 
+		header("Location: login.php");
+
 	}
 
 }
@@ -148,7 +150,7 @@ if(isset($_POST['register_button'])){
 			echo $_SESSION['reg_email2'];
 		} 
 		?>" required>
-		<?php if(in_array("Email already in use<br>", $error_array)) echo "Email already in use<br>"; 
+		<?php if(in_array("Email already in use<br>", $error_array)) echo "<br>Email already in use<br>"; 
 		else if(in_array("Invalid email format<br>", $error_array)) echo "Invalid email format<br>";
 		else if(in_array("Emails don't match<br>", $error_array)) echo "Emails don't match<br>"; ?>
 			</div>
@@ -160,12 +162,13 @@ if(isset($_POST['register_button'])){
       
       <div>
 				<input type="password" name="reg_password2" placeholder="Confirm Password" required>
-        <?php if(in_array("Your passwords do not match<br>", $error_array)) echo "Your passwords do not match<br>"; 
-		else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo "Your password can only contain english characters or numbers<br>";
-		else if(in_array("Your password must be betwen 5 and 30 characters<br>", $error_array)) echo "Your password must be betwen 5 and 30 characters<br>"; ?>
+        <?php if(in_array("Your passwords do not match<br>", $error_array)) echo " <br>Your passwords do not match<br>"; 
+		else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo "<br>Your password can only contain english characters or numbers<br>";
+		else if(in_array("Your password must be betwen 5 and 30 characters<br>", $error_array)) echo " <br>Your password must be betwen 5 and 30 characters<br>"; ?>
 			</div>
 			<div>
 				<input type="submit" name="register_button" value="Register">
+				
 				<a href="login.php">Already a user? </a>
 			</div>
 		</form><!-- form -->
