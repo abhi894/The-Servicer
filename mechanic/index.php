@@ -61,7 +61,7 @@ Vehicle type: <?php echo $type; ?> &nbsp
 status: <?php echo $status; ?> &nbsp 
 
 Booking Date & Time: <?php echo $bookdate; ?> &nbsp 
-<button  class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
   Completed
 </button>
 
