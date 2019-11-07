@@ -21,6 +21,8 @@ if($check_online == 1) {
 	$query = mysqli_query($con, "INSERT INTO `bookings` (`id`, `user_id`, `mechanic_id`, `datetime`, `locality`, `reg_no`, `type`, `status`) VALUES (NULL, '$userLoggedIn', '$mecid', '$date_added', '$locality', '$reg', '$type', '0')");
 
 	$message = "Booking Sucessfull";
+
+	header("Location: mybookings.php");
 }
 else
 $message = "No Mechanics online";
