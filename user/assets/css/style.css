@@ -1,35 +1,41 @@
 .top_bar{
 	width: 100%;
-	min-width: 1024px;
-	height: 50px;
-	background-color: #A3CB38;
-	border-bottom: 5px solid #C4E538;
-	margin: 0 0 10px 0;
-	display: inline-flex;
-	position: fixed;
-	z-index: 10;
+    min-width: 1024px;
+    height: 50px;
+    background-color: #8c714e;
+    border-bottom: 5px solid #8c714e;
+    margin: 0 0 10px 0;
+    display: inline-flex;
+    position: fixed;
+    z-index: 10;
+    /* font-style: normal; */
+    font-family: sans-serif;
 }
 body{
 
-	background-color: aliceblue;
+	background-image:url(https://images.pexels.com/photos/414579/pexels-photo-414579.jpeg?cs=srgb&dl=art-clockwork-cogs-414579.jpg&fm=jpg);
 
 }
 .logo a{
-margin-left: 79px;
-    font-family: fantasy;
+	margin-left: 79px;
+    font-family: monospace;
     position: relative;
     top: 9px;
-    font-size: x-large;
+    /* font-size: x-large; */
+    font-size: xx-large;
+    font-style: unset;
 }
 
 a:hover {
 	text-decoration: none;
 }
 nav a{
-	position: relative;
-	color: #fff;
-	text-decoration: none;
-	font-size: 17px;
+	color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}
+a{
+	color: #ffffff;
 }
 
 nav	{
@@ -40,19 +46,36 @@ nav	{
 }
 
 .wrapper{
-	margin: 0 auto;
-	top: 50px;
-	position: relative;
-	padding: 0 10px;
-	width: 75%;
-	min-width: 950px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    top: 170px;
+    position: relative;
+    padding: 0px 42px;
+    width: 60%;
+    min-width: 911px;
 
 }
 
 .column{
-	background: #fff;
-	padding: 10px;
-	border: 1px solid #D3D3D3;
+	align-content: center;
+    background: #fff;
+    padding: 159px;
+    padding-top: 77px;
+    padding-bottom: 77px;
+    border: 1px solid #D3D3D3;
+    border-radius: 7px;
+    box-shadow: 2px 2px 1px #D3D3D3;
+    z-index: -1;
 
 
+}
+.summit{
+	color: aliceblue;
+    font-family: cursive;
+    position: relative;
+    left: 270px;
+    top: 27px;
+}
 }

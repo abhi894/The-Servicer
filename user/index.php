@@ -8,7 +8,10 @@ include("includes/bookings_handler.php");
 
 	<h4> Book Service</h4>
 
-	Enter the vehicle details here
+  <h6> Enter the vehicle details here </h6>
+  <br>
+  <br>
+
 
 	<form action="index.php" method="POST">
 		
@@ -36,7 +39,7 @@ include("includes/bookings_handler.php");
 
   </select>
 
-  <input type="submit" name="book" value="Book Now">
+  
 
   <?php echo $message; ?>
 
@@ -47,6 +50,9 @@ include("includes/bookings_handler.php");
 
 
 
+ </div>
+ <div class="summit">
+ <input type="submit" name="book" value="Book Now">
  </div>
  </body>
  </html>
