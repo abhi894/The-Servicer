@@ -10,8 +10,7 @@ $phone = ""; //email 2
 $password = ""; //password
 $password2 = ""; //password 2
 $date = ""; //Sign up date 
-$latitude="";
-$longitude="";
+$locality="";
 $error_array = array(); //Holds error messages
 
 if(isset($_POST['register_button'])){
@@ -42,8 +41,7 @@ if(isset($_POST['register_button'])){
 	$password2 = strip_tags($_POST['reg_password2']); //Remove html tags
 
 	//location
-	$latitude = strip_tags($_POST['reg_latitude']);
-	$longitude = strip_tags($_POST['reg_longitude']);
+	$locality = strip_tags($_POST['reg_locality']);
 
 	$date = date("Y-m-d"); //Current date
 
@@ -98,7 +96,7 @@ if(isset($_POST['register_button'])){
 		
 
 
-		$query = mysqli_query($con, "INSERT INTO mechanic VALUES ('', '$name', '$em', '$password', '$phone', '$latitude','$longitude','1')");
+		$query = mysqli_query($con, "INSERT INTO mechanic VALUES ('', '$name', '$em', '$password', '$phone', '$locality','1')");
 
 		array_push($error_array, "<span style='color: #14C800;'>You're all set! Goahead and login!</span><br>");
 
@@ -115,7 +113,7 @@ if(isset($_POST['register_button'])){
 
 
 <html>
-<link rel="stylesheet" href="styles/register.css"/>
+<link rel="stylesheet" href="styles/mechanic_register.css"/>
 <head>
 	<title>Mechanic Registration</title>
 </head>
@@ -136,7 +134,7 @@ if(isset($_POST['register_button'])){
 		} 
 		?>" required>
         <?php if(in_array("Your name must be between 2 and 25 characters<br>", $error_array)) echo "Your first name must be between 2 and 25 characters<br>"; ?>
-			</div>
+		</div>
       
       
 			<div>
@@ -170,15 +168,30 @@ if(isset($_POST['register_button'])){
 		else if(in_array("Your password must be betwen 5 and 30 characters<br>", $error_array)) echo "Your password must be betwen 5 and 30 characters<br>"; ?>
 			</div>
       
-      <div>
-				<input type="text" name="reg_latitude" placeholder="Latitude" required>
+      <!-- <div>
+				<input type="text" name="reg_locality" placeholder="Locality" required>
+			</div> -->
+			<div class="dp_list">
+				<select name="reg_locality" placeholder="Select Locality">
+   				 	<option value="aluva">Aluva</option>
+   					<option value="edapally">Edapally</option>
+					<option value="kakkanad">Kakkanad</option>
+					<option value="kalamassery">Kalammasery</option>
+   					<option value="thrikakkara">Thrikakkara</option>
+ 				 </select>
 			</div>
-      
-      <div>
-				<input type="text" name="reg_longitude" placeholder="Longitude" required>
-			</div>
-      
-      
+
+			<!-- <div>
+				<input type="text" name="city" list="cityname">
+   				<datalist id="cityname">
+				   <option value="volvo">Aluva</option>
+   					<option value="saab">Edapally</option>
+					<option value="fiat">Kakkanad</option>
+					<option value="audi">Kalammasery</option>
+   					<option value="audi">Thrikakkara</option>
+    			</datalist>
+			</div> -->
+
 			<div>
 				<input type="submit" name="register_button" value="Register">
 				<a href="login.php">Already a user? </a>

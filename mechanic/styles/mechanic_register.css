@@ -1,3 +1,4 @@
+
 body {
 	background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
 	color: #000;
@@ -115,7 +116,10 @@ form:after {
 }
 #content form { margin: 0 20px; position: relative }
 #content form input[type="email"],
-#content form input[type="password"] {
+#content form input[type="password"],
+#content form input[type="select"],
+#content form select,
+#content form input[type="text"]{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
@@ -234,7 +238,6 @@ form:after {
 	background-position: 0 -135px;
 	color: #00aeef;
 }
-
 .home{
     text-align: right;
 
@@ -242,15 +245,6 @@ form:after {
 
 .home h3{
     color: #777;
-    padding-right: 2%;
-}
-
-.login_title h1{
-    color: #004a80;
-}
-.login_title{
-  text-align: center;
-}
-.bar_top{
-    display: inline;
+	padding-right: 2%;
+	padding-top: 2%;
 }

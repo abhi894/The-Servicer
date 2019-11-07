@@ -30,12 +30,11 @@ if(isset($_POST['login'])) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="styles/login.css"/>
 <head>
-
-
 	<title>User Login</title>
 </head>
 <body style="margin:0px">

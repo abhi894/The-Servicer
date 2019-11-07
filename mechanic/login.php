@@ -49,11 +49,6 @@ if(isset($_POST['login'])) {
 	<a href="../index.html"><h3>Home</h3></a>
 </div>
 
-
-
-
-
-
 <div class="container">
 	<section id="content">
 		<form name="login" id="login" action="login.php" method="POST">
