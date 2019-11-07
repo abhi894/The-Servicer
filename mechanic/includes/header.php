@@ -4,7 +4,7 @@ require 'config/config.php';
 
 if (isset($_SESSION['username'])) {
 	$userLoggedIn= $_SESSION['username'];
-	$user_details_query = mysqli_query($con, "SELECT * FROM user WHERE id='$userLoggedIn'");
+	$user_details_query = mysqli_query($con, "SELECT * FROM mechanic WHERE id='$userLoggedIn'");
 	$user = mysqli_fetch_array($user_details_query);
 }
 else{
@@ -32,7 +32,7 @@ else{
  		<nav>
  		<a href="#"><i class="fas fa-home"></i> Dashbard</a>&nbsp
  		<a href="#"><i class="far fa-object-ungroup"></i> My Orders</a> &nbsp
- 		<a href="#"><i class="fas fa-users-cog"></i>  Settings</a>&nbsp
+ 		<a href="settings.php"><i class="fas fa-users-cog"></i>  Settings</a>&nbsp
  		<a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sign out</a>&nbsp
  	</nav>
  

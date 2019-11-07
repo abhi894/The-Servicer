@@ -30,7 +30,7 @@ else{
  			<a href="index.php">The Servicer</a>
  		</div>
  		<nav>
- 		<a href="#"><i class="fas fa-home"></i> Dashbard</a>&nbsp
+ 		<a href="#"><i class="fas fa-home"></i> Dashboard</a>&nbsp
  		<a href="#"><i class="far fa-object-ungroup"></i> My Bookings</a> &nbsp
  		<a href="settings.php"><i class="fas fa-users-cog"></i>  Settings</a>&nbsp
  		<a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sign out</a>&nbsp
