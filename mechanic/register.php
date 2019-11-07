@@ -173,6 +173,7 @@ if(isset($_POST['register_button'])){
 			</div> -->
 			<div class="dp_list">
 				<select name="reg_locality" placeholder="Select Locality">
+					<option value="">Select Locality</option>
    				 	<option value="aluva">Aluva</option>
    					<option value="edapally">Edapally</option>
 					<option value="kakkanad">Kakkanad</option>
