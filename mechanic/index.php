@@ -44,7 +44,7 @@ $mecphone= $mechanic['phone'];
 
 Booking ID: <?php echo $id; ?> &nbsp
 
-Mechanic Details <br> Name: <?php echo $mecname; ?> &nbsp
+User Details <br> Name: <?php echo $mecname; ?> &nbsp
 
 Number: <?php echo $mecphone; ?> &nbsp
 

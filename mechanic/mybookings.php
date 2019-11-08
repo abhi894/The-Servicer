@@ -44,7 +44,7 @@ $mecphone= $mechanic['phone'];
 
 Booking ID: <?php echo $id; ?> &nbsp
 
-Mechanic Details <br> Name: <?php echo $mecname; ?> &nbsp
+User Details <br> Name: <?php echo $mecname; ?> &nbsp
 
 Number: <?php echo $mecphone; ?> &nbsp
 
@@ -61,9 +61,7 @@ Vehicle type: <?php echo $type; ?> &nbsp
 status: <?php echo $status; ?> &nbsp 
 
 Booking Date & Time: <?php echo $bookdate; ?> &nbsp 
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
-  Cancel booking
-</button>
+
 <!-- The Modal -->
 <div class="modal" id="myModal">
   <div class="modal-dialog">
