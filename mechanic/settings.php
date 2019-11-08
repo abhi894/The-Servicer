@@ -1,43 +1,47 @@
 <?php 
 include("includes/header.php"); 
-include("includes/settings_handler.php"); 
+include("includes/mechanic_settings_handler.php"); 
 
 
  ?>
 
  <div class="main_column column">
 
- <?php
-	$user_data_query = mysqli_query($con, "SELECT name, phone, email,locality FROM mechanic WHERE id='$userLoggedIn'");
+ 	
+
+ 	<?php
+	$user_data_query = mysqli_query($con, "SELECT name, phone, email FROM mechanic WHERE id='$userLoggedIn'");
 	$row = mysqli_fetch_array($user_data_query);
 
 	$name = $row['name'];
 	$phone = $row['phone'];
 	$email = $row['email'];
-	$locality = $row['locality']
 	?>
 
 	
   <h5>Locality: </h5><?php echo $locality ?> <br>
 
- <div class="column1">	<h4> Account Settings</h4>
-
+ <div class="column1">	<hr><h4><div class="head"> Account Settings </div><hr>
+</h4>
+<div class="sub">
  	Modify the values and click "Update Details"
-
+</div>
  	
 
  	<form action="settings.php" method="POST">
-
-
- 		Name : <input type="text" name="name" value="<?php echo $name ?>"> <br>
-
- 		Email : <input type="email" name="email" value="<?php echo $email ?>"> <br>
-
- 		Phone : <input type="text" name="phone" value="<?php echo $phone ?>"> <br>
+    <div class="boxclass">
+ 		Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="name" value="<?php echo $name ?>"> <br>
+</div>
+<div class="boxclasse">
+ 		Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="email" name="email" value="<?php echo $email ?>"> <br>
+</div>
+<div class="boxclassp">
+		Phone :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="phone" value="<?php echo $phone ?>"> <br>
+</div>
  		<input type="submit" name="update_details" value="Update Details"> <br>
  		<?php echo $message; ?>
  	</form>
- 		Change password
+ 		Chance password
  		<form action="settings.php" method="POST">
 
  		old password : <input type="password" name="oldpw"  > <br>
