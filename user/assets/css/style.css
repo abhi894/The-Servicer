@@ -1,5 +1,6 @@
 .top_bar{
-	width: 100%;
+    width: 100%;
+    background-image: linear-gradient(#b6a257, transparent);
     min-width: 1024px;
     height: 50px;
     background-color: #8c714e;
@@ -18,10 +19,10 @@ body{
 }
 .logo a{
 	margin-left: 79px;
-    font-family: monospace;
+    font-family: poppins;
     position: relative;
-    top: 9px;
-    /* font-size: x-large; */
+    top: 0px;
+    font-size: x-large;
     font-size: xx-large;
     font-style: unset;
 }

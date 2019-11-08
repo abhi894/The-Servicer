@@ -5,8 +5,9 @@ include("includes/bookings_handler.php");
 ?>
 
 <div class="main_column column"> 
-
+  <hr>
 	<h4> Book Service</h4>
+  <hr>
 
   <h6> Enter the vehicle details here </h6>
   <br>

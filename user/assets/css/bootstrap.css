@@ -379,7 +379,11 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  position: relative;
+  left: 220px;
+  color: #1d1d16;
+  font-family: poppins;
 }
 
 h5, .h5 {
@@ -388,6 +392,8 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 1rem;
+  position: relative;
+  left: 215px;
 }
 
 .lead {
@@ -1862,8 +1868,8 @@ pre code {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
+  color: #000000;
+  background-color: #bbbfc4;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
