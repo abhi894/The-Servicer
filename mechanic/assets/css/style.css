@@ -12,12 +12,15 @@ body{background-image: url(https://wallpaperplay.com/walls/full/3/b/4/73219.jpg)
 
 }
 .logo a{
-margin-left: 79px;
-    font-family: fantasy;
+	margin-left: 79px;
+    font-family: expressa;
     position: relative;
-    top: 9px;
-    font-size: x-large;
+    top: -1px;
+    color: #ffb14f;
+	font-size: 33px;
+	font-weight: bold;
 }
+
 
 a:hover {
 	text-decoration: none;
@@ -34,4 +37,22 @@ nav	{
 	right: 1px;
 	position: absolute;
 	margin: 10px;
+}
+.column1{
+	top: 129px;
+    margin-right: auto;
+    color: #000;
+    background-color: #2d475500;
+    position: relative;
+   
+    padding: 8px;
+    z-index: -1;
+    border-radius: 7px;
+    background-image: linear-gradient(421deg, #ff8b4ec2, #0d2b4ebf);
+    border: 1px solid #585353;
+    font-family: tahoma;
+    margin-left: auto;
+    width: 650px;
+    padding-top: 12px;
+
 }

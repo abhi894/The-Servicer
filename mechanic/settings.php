@@ -20,7 +20,7 @@ include("includes/settings_handler.php");
 	
   <h5>Locality: </h5><?php echo $locality ?> <br>
 
- 	<h4> Account Settings</h4>
+ <div class="column1">	<h4> Account Settings</h4>
 
  	Modify the values and click "Update Details"
 
@@ -50,10 +50,11 @@ include("includes/settings_handler.php");
  		<?php echo $password_message; ?>
  		
  	</form>
- 	<h4> Close Account </h4>
+	 <h4> Close Account </h4>
+
  	<form action="closeacc.php" method="POST">
  		<input type="submit" name="closeacc" id="closeacc" value="Close Account">
  	</form>
- 	
+ 	</div>
 
  </div>

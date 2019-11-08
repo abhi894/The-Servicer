@@ -7,7 +7,7 @@ include("includes/header.php");
 <div class="main_column column"> 
 <?php 
 
-$data = mysqli_query($con, "SELECT * FROM bookings WHERE user_id='$userLoggedIn' && status='0' ORDER BY id DESC");
+$data = mysqli_query($con, "SELECT * FROM bookings WHERE (user_id='$userLoggedIn' && status='0') ORDER BY id DESC");
 
 while ($row= mysqli_fetch_array($data)) {
 	$str="";
