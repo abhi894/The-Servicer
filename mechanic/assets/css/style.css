@@ -1,13 +1,14 @@
 .top_bar{
 	width: 100%;
-	min-width: 1024px;
-	height: 50px;
-	background-color: #A3CB38;
-	border-bottom: 5px solid #C4E538;
-	margin: 0 0 10px 0;
-	display: inline-flex;
+    min-width: 1024px;
+    height: 50px;
+    background-color: #041825;
+    border-bottom: 1px solid #fdb94e;
+    margin: 0 0 10px 0;
+    display: inline-flex;
+    background-image: linear-gradient( #ffffff17, transparent);
 }
-body{
+body{background-image: url(https://wallpaperplay.com/walls/full/3/b/4/73219.jpg)
 
 }
 .logo a{
