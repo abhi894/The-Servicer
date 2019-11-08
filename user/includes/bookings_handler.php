@@ -7,7 +7,7 @@ if (isset($_POST['book'])) {
 	$locality=$_POST['locality'];
 
 
-$mechanic_data_query = mysqli_query($con, "SELECT id FROM mechanic WHERE status='1' LIMIT 1");
+$mechanic_data_query = mysqli_query($con, "SELECT id FROM mechanic WHERE (status='1' && locality='$locality') LIMIT 1");
 
 $check_online= mysqli_num_rows($mechanic_data_query);
 

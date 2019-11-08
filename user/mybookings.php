@@ -76,9 +76,10 @@ Booking Date & Time: <?php echo $bookdate; ?> &nbsp
       </div>
 
       <div class="modal-footer">
-      	<form action="mybookings.php?" method="POST">
-        <input type="submit" name="delete" class="btn btn-danger" data-dismiss="modal" value="Yes i am Sure"></input>
+      	<form action="mybookings.php" method="POST">
+        <input type="submit" name="delete" class="btn btn-danger" data-dismiss="modal" onclick="delete()" value="Yes i am Sure"></input>
         </form>
+        
       
       </div>
 

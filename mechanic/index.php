@@ -7,7 +7,7 @@ include("includes/header.php");
 <div class="main_column column"> 
 <?php 
 
-$data = mysqli_query($con, "SELECT * FROM bookings WHERE mechanic_id='$userLoggedIn' && status='0' ORDER BY id DESC");
+$data = mysqli_query($con, "SELECT * FROM bookings WHERE user_id='$userLoggedIn' && status='0' ORDER BY id DESC");
 
 while ($row= mysqli_fetch_array($data)) {
 	$str="";
@@ -27,7 +27,7 @@ while ($row= mysqli_fetch_array($data)) {
 		$status= "Completed";
 
 
-$mecdata = mysqli_query($con, "SELECT * FROM user WHERE (id='$uid' && status='0')");
+$mecdata = mysqli_query($con, "SELECT * FROM user WHERE id='$uid'");
 $mechanic=mysqli_fetch_array($mecdata);
 
 $mecname= $mechanic['name'];
@@ -62,9 +62,8 @@ status: <?php echo $status; ?> &nbsp
 
 Booking Date & Time: <?php echo $bookdate; ?> &nbsp 
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
-  Completed
+  Cancel booking
 </button>
-
 <!-- The Modal -->
 <div class="modal" id="myModal">
   <div class="modal-dialog">
@@ -77,9 +76,10 @@ Booking Date & Time: <?php echo $bookdate; ?> &nbsp
       </div>
 
       <div class="modal-footer">
-      	<form action="mybookings.php?" method="POST">
-        <input type="submit" name="delete" class="btn btn-danger" data-dismiss="modal" value="Yes i am Sure"></input>
+      	<form action="mybookings.php" method="POST">
+        <input type="submit" name="delete" class="btn btn-danger" data-dismiss="modal" onclick="delete()" value="Yes i am Sure"></input>
         </form>
+        
       
       </div>
 

@@ -43,7 +43,8 @@ include("includes/bookings_handler.php");
   
 
   <?php echo $message; ?>
-
+<div class="summit">
+ <input type="submit"  name="book" value="Book Now" >
 
 	</form>
 
@@ -52,8 +53,7 @@ include("includes/bookings_handler.php");
 
 
  </div>
- <div class="summit">
- <input type="submit" name="book" value="Book Now">
+ 
  </div>
  </body>
  </html>

@@ -7,7 +7,7 @@ include("includes/header.php");
 <div class="main_column column"> 
 <?php 
 
-$data = mysqli_query($con, "SELECT * FROM bookings WHERE mechanic_id='$userLoggedIn' && status='1' ORDER BY id DESC");
+$data = mysqli_query($con, "SELECT * FROM bookings WHERE user_id='$userLoggedIn' && status='1' ORDER BY id DESC");
 
 while ($row= mysqli_fetch_array($data)) {
 	$str="";
@@ -57,7 +57,6 @@ Registration Number: <?php echo $regnum; ?> &nbsp
 Vehicle type: <?php echo $type; ?> &nbsp 
 
 <br>
-<br>
 
 status: <?php echo $status; ?> &nbsp 
 
@@ -75,9 +74,10 @@ Booking Date & Time: <?php echo $bookdate; ?> &nbsp
       </div>
 
       <div class="modal-footer">
-      	<form action="mybookings.php?" method="POST">
-        <input type="submit" name="delete" class="btn btn-danger" data-dismiss="modal" value="Yes i am Sure"></input>
+      	<form action="mybookings.php" method="POST">
+        <input type="submit" name="delete" class="btn btn-danger" data-dismiss="modal" onclick="delete()" value="Yes i am Sure"></input>
         </form>
+        
       
       </div>
 
