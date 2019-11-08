@@ -1,33 +1,26 @@
 <?php 
 include("includes/header.php"); 
-include("includes/settings_handler.php"); 
+include("includes/mechanic_settings_handler.php"); 
 
 
  ?>
 
  <div class="main_column column">
 
- <?php
-	$user_data_query = mysqli_query($con, "SELECT name, phone, email,locality FROM mechanic WHERE id='$userLoggedIn'");
+ 	<h4> Account Settings</h4>
+
+ 	Modify the values and click "Update Details"
+
+ 	<?php
+	$user_data_query = mysqli_query($con, "SELECT name, phone, email FROM mechanic WHERE id='$userLoggedIn'");
 	$row = mysqli_fetch_array($user_data_query);
 
 	$name = $row['name'];
 	$phone = $row['phone'];
 	$email = $row['email'];
-	$locality = $row['locality']
 	?>
 
-	
-  <h5>Locality: </h5><?php echo $locality ?> <br>
-
- 	<h4> Account Settings</h4>
-
- 	Modify the values and click "Update Details"
-
- 	
-
  	<form action="settings.php" method="POST">
-
 
  		Name : <input type="text" name="name" value="<?php echo $name ?>"> <br>
 
@@ -37,7 +30,7 @@ include("includes/settings_handler.php");
  		<input type="submit" name="update_details" value="Update Details"> <br>
  		<?php echo $message; ?>
  	</form>
- 		Change password
+ 		Chance password
  		<form action="settings.php" method="POST">
 
  		old password : <input type="password" name="oldpw"  > <br>
