@@ -7,7 +7,7 @@ include("includes/header.php");
 <div class="main_column column"> 
 <?php 
 
-$data = mysqli_query($con, "SELECT * FROM bookings WHERE user_id='$userLoggedIn' && status='1' ORDER BY id DESC");
+$data = mysqli_query($con, "SELECT * FROM bookings WHERE  user_id='$userLoggedIn' ORDER BY id DESC");
 
 while ($row= mysqli_fetch_array($data)) {
 	$str="";
@@ -27,7 +27,7 @@ while ($row= mysqli_fetch_array($data)) {
 		$status= "Completed";
 
 
-$mecdata = mysqli_query($con, "SELECT * FROM user WHERE id='$uid'");
+$mecdata = mysqli_query($con, "SELECT * FROM user WHERE  id='$uid'");
 $mechanic=mysqli_fetch_array($mecdata);
 
 $mecname= $mechanic['name'];
@@ -61,7 +61,9 @@ Vehicle type: <?php echo $type; ?> &nbsp
 status: <?php echo $status; ?> &nbsp 
 
 Booking Date & Time: <?php echo $bookdate; ?> &nbsp 
-
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+  Cancel booking
+</button>
 <!-- The Modal -->
 <div class="modal" id="myModal">
   <div class="modal-dialog">
